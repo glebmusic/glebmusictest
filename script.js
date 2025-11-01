@@ -80,3 +80,16 @@ function getResult() {
   const playlist = playlistList[Math.floor(Math.random() * playlistList.length)];
 
   const descList = descriptions[randomGenre.toLowerCase()];
+  const desc = descList[Math.floor(Math.random() * descList.length)];
+
+  const resultDiv = document.getElementById("result");
+  resultDiv.innerHTML = `
+    <h2>🎧 Твой жанр — ${randomGenre}</h2>
+    <p>${desc}</p>
+    <a href="${playlist}" target="_blank">▶ Слушать плейлист</a>
+  `;
+  resultDiv.classList.add("show");
+}
+
+document.getElementById("quiz").innerHTML =
+  <button onclick="getResult()">Начать тест</button>;
