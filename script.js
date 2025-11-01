@@ -79,7 +79,6 @@ function getResult() {
   const playlistList = playlists[randomGenre.toLowerCase()];
   const playlist = playlistList[Math.floor(Math.random() * playlistList.length)];
 
-  const descList = descriptions[randomGenre.toLowerCase()];
   const desc = descList[Math.floor(Math.random() * descList.length)];
 
   const resultDiv = document.getElementById("result");
